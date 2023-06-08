@@ -1,0 +1,74 @@
+.contacts {
+  font-family: 'Montserrat', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @base-black;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.contacts__address {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    content: '';
+    width: 13px;
+    height: 16px;
+    background-image: url('../img/map-pin-icon.svg');
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.contacts__phone {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin: 0;
+  padding: 0;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    content: '';
+    width: 13px;
+    height: 16px;
+    background-image: url('../img/phone-icon.svg');
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}

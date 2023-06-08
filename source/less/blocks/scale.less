@@ -1,0 +1,92 @@
+.scale {
+  padding: 12px 0;
+}
+
+.scale--disabled {
+  pointer-events: none;
+
+}
+
+.scale--disabled .scale__range {
+  background-color: @base-gray;
+}
+
+.scale--disabled .scale__button {
+  border-color: @base-gray;
+}
+
+.scale__bar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2px;
+  background-color: @light-gray;
+  padding: 0 12px;
+}
+
+.scale__range {
+  position: relative;
+  width: 92%;
+  left: 0;
+  right: 10%;
+  height: 4px;
+  background-color: @primary-lighter;
+}
+
+.scale__button {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid @primary-lighter;
+  background-color: @base-white;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+
+  &:hover,
+  &:focus {
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: @primary-opacity;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &:active {
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: @base-primary;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.scale__button--min {
+  left: 0;
+  top: 50%;
+}
+
+.scale__button--max {
+  left: 100%;
+  top: 50%;
+}
+
+.price-form__divider {
+  box-sizing: border-box;
+  width: 9px;
+  height: 2px;
+  background-color: @base-gray;
+}

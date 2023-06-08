@@ -1,0 +1,227 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: 'Montserrat', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: @base-black;
+  background-color: @base-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas:
+      'social nav'
+      'credits credits';
+    grid-template-columns: 318px 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 16px;
+    padding: 40px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: social;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  display: block;
+  line-height: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__title {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: inherit;
+    text-transform: none;
+    margin: 0;
+    margin-bottom: 50px;
+    letter-spacing: normal;
+  }
+}
+
+.footer__social-list-wrapper {
+  width: 160px;
+}
+
+.footer__social-list {
+  width: 100%;
+}
+
+.footer__nav {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: nav;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+.footer__nav-list-wrapper {
+  padding: 20px;
+  border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    padding-top: 9px;
+  }
+}
+
+.footer__nav-list-wrapper:last-child .footer__nav-heading {
+  margin-bottom: 20px;
+}
+
+.footer__nav-heading {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: @base-primary;
+  text-transform: none;
+  margin: 0;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 12px;
+  }
+}
+
+.footer__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav-item {
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__nav-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px 0;
+  text-decoration: none;
+  color: @base-black;
+  width: fit-content;
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.footer__credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: @base-gray;
+  text-decoration: none;
+  text-transform: none;
+  padding: 20px 20px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: credits;
+  }
+}
+
+.footer__credits-label {
+  margin-right: 3px;
+}
+
+.footer__credits-link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.footer__credits-link-label {
+  margin-right: 4px;
+}
+
+.footer__credits-icon {
+  display: block;
+  line-height: 16px;
+}

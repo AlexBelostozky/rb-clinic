@@ -1,0 +1,29 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list__button {
+  display: block;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  line-height: 0;
+  color: @base-gray;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+    background-color: @base-secondary;
+  }
+
+  &:active {
+    color: @base-primary;
+    background-color: @primary-opacity;
+  }
+}
