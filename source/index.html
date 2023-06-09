@@ -103,7 +103,6 @@
       </section>
 
       <section class="services">
-
         <ul class="services__list">
           <!-- Для отображения слайда добавить модификатор show -->
           <li class="services__item services__item--show service">
@@ -292,126 +291,110 @@
           </li>
         </ul>
 
-        <a class="hero__button hero__button--prev" href="#">
-          <span class="visually-hidden">Показать предыдущий слайд.</span>
-          <svg class="hero__button-icon" fill="currentColor">
-            <use href="img/icons/stack.svg#hero-button-icon"></use>
-          </svg>
-        </a>
+        <div class="services__pagination pagination">
+          <a class="pagination__button pagination__button--prev" href="#">
+            <span class="visually-hidden">Показать предыдущую услугу.</span>
+            <svg class="pagination__button-icon" fill="currentColor">
+              <use href="img/icons/stack.svg#nav-button-icon"></use>
+            </svg>
+          </a>
 
-        <a class="hero__button hero__button--next" href="#">
-          <span class="visually-hidden">Показать следующий слайд.</span>
-          <svg class="hero__button-icon" fill="currentColor">
-            <use href="img/icons/stack.svg#hero-button-icon"></use>
-          </svg>
-        </a>
+          <span class="pagination__page-label">
+            <span class="pagination__page-current">1</span>
+            /
+            <span class="pagination__page-amount">4</span>
+          </span>
+
+          <a class="pagination__button pagination__button--next" href="#">
+            <span class="visually-hidden">Показать следующую услугу.</span>
+            <svg class="pagination__button-icon" fill="currentColor">
+              <use href="img/icons/stack.svg#nav-button-icon"></use>
+            </svg>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__social">
-        <a class="footer__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/d2g-logo-large.svg" width="170" height="36">
-            <img src="img/d2g-logo-middle.svg" width="82" height="36" alt="Логотип Drink2Go.">
-          </picture>
-        </a>
+      <div class="footer__wrapper">
+        <div class="footer__logo-nav-wrapper">
+          <a class="footer__logo" href="index.html">
+            <span class="visually-hidden">Логотип RB Clinic.</span>
+            <svg class="footer__logo-icon" fill="currentColor">
+              <use href="img/icons/stack.svg#rb-icon"></use>
+            </svg>
+          </a>
 
-        <h2 class="footer__title">Интернет-магазин кофейных напитков</h2>
+          <nav class="footer__nav">
+            <h2 class="visually-hidden">Навигация.</h2>
 
-        <div class="footer__social-list-wrapper">
-          <h3 class="visually-hidden">Наши социальные сети.</h3>
-          <ul class="footer__social-list social-list">
-            <li class="social-list__item">
-              <a class="social-list__button" href="https://vk.com/htmlacademy">
-                <svg class="social-list__icon" width="20" height="20" fill="currentColor">
-                  <use href="img/icons/stack.svg#vk-logo"></use>
-                </svg>
-                <span class="visually-hidden">ВКонтакте.</span>
-              </a>
-            </li>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link">О клинике</a>
+              </li>
 
-            <li class="social-list__item">
-              <a class="social-list__button" href="https://pinterest.com">
-                <svg class="social-list__icon" width="20" height="20" fill="currentColor">
-                  <use href="img/icons/stack.svg#pinterest-logo"></use>
-                </svg>
-                <span class="visually-hidden">Pinterest.</span>
-              </a>
-            </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Услуги</a>
+              </li>
 
-            <li class="social-list__item">
-              <a class="social-list__button" href="https://ok.com">
-                <svg class="social-list__icon" width="20" height="20" fill="currentColor">
-                  <use href="img/icons/stack.svg#ok-logo"></use>
-                </svg>
-                <span class="visually-hidden">Одноклассники.</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Специалисты</a>
+              </li>
 
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Цены</a>
+              </li>
 
-      <div class="footer__nav">
-        <div class="footer__nav-list-wrapper">
-          <h3 class="footer__nav-heading">Интернет-магазин</h3>
-
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#catalog">Каталог</a>
-            </li>
-
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Доставка</a>
-            </li>
-
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Способы оплаты</a>
-            </li>
-
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">О нас</a>
-            </li>
-          </ul>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="footer__nav-list-wrapper">
-          <h3 class="footer__nav-heading">Медиа</h3>
+        <h3 class="visually-hidden">Наши социальные сети.</h3>
+        <ul class="footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__button" href="#">
+              <picture class="social-list__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="24" height="24">
 
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Блог</a>
-            </li>
+                <source media="(min-width: 1440px)" srcset="img/instagram-icon.png 1x, img/instagram-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/instagram-icon.png 1x, img/instagram-icon@2x.png 2x" width="35" height="35">
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Информация для СМИ</a>
-            </li>
+                <img src="img/instagram-icon.png" srcset="img/instagram-icon@2x.png 2x" width="24" height="24" alt="Instagram.">
+              </picture>
+            </a>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Правовая информация</a>
-            </li>
-          </ul>
-        </div>
+            <a class="social-list__button" href="#">
+              <picture class="social-list__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="24" height="24">
 
-        <div class="footer__nav-list-wrapper">
-          <h3 class="footer__nav-heading">Контакты</h3>
+                <source media="(min-width: 1440px)" srcset="img/whatsapp-icon.png 1x, img/whatsapp-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/whatsapp-icon.png 1x, img/whatsapp-icon@2x.png 2x" width="35" height="35">
 
-          <address class="footer__nav-contacts contacts">
-            <a class="contacts__address" href="https://go.2gis.com/3o9ry5">Санкт-Петербург, набережная реки Карповки, дом 5</a>
-            <a class="contacts__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
-          </address>
-        </div>
-      </div>
+                <img src="img/whatsapp-icon.png" srcset="img/whatsapp-icon@2x.png 2x" width="24" height="24" alt="Whatsapp.">
+              </picture>
+            </a>
 
-      <div class="footer__credits">
-        <span class="footer__credits-label">Разработано в</span>
-        <a class="footer__credits-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="footer__credits-link-label">HTML Academy</span>
-          <svg class="footer__credits-icon" width="12" height="16" fill="currentColor">
-            <use href="img/icons/stack.svg#html-academy-logo"></use>
-          </svg>
-        </a>
+            <a class="social-list__button" href="#">
+              <picture class="social-list__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="24" height="24">
+
+                <source media="(min-width: 1440px)" srcset="img/telegram-icon.png 1x, img/telegram-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/telegram-icon.png 1x, img/telegram-icon@2x.png 2x" width="35" height="35">
+
+                <img src="img/telegram-icon.png" srcset="img/telegram-icon@2x.png 2x" width="24" height="24" alt="Telegram.">
+              </picture>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
