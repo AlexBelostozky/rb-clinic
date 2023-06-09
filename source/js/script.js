@@ -1,20 +1,28 @@
+
+// Swiper script
+
+
+// Imports
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+//
+// const swiper = new Swiper(".swiper", {
+//   pagination: {
+//     el: ".pagination__page-label",
+//     type: "fraction",
+//   },
+//   navigation: {
+//     nextEl: ".pagination__button--next",
+//     prevEl: ".pagination__button--prev",
+//   },
+// });
+
 // Header navigation logic variables
 const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.header__nav');
 const navToggle = document.querySelector('.header__nav-toggle');
 const headerContainer = document.querySelector('.header__container');
-// Sort select logic variables
-const selectList = document.querySelector('.custom-select__option-list');
-const selectToggle = document.querySelector('.custom-select__toggle');
-const selectContainer = document.querySelector('.custom-select');
-const selectCurrentLabel = document.querySelector('.custom-select__current-label');
 
 // Remove nojs header tags
-selectContainer.classList.remove('custom-select--nojs')
-selectList.classList.add('custom-select__option-list--closed');
-selectList.classList.remove('custom-select__option-list--opened');
-
-// Remove nojs select tags
 headerContainer.classList.remove('header__container--nojs')
 navMain.classList.add('header__nav--closed');
 navMain.classList.remove('header__nav--opened');
@@ -32,33 +40,6 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-// Set select listener
-selectToggle.addEventListener('click', function () {
-  if (selectList.classList.contains('custom-select__option-list--closed')) {
-    // Open list
-    selectList.classList.remove('custom-select__option-list--closed');
-    selectList.classList.add('custom-select__option-list--opened');
-    selectList.addEventListener('click', onSelectListClick);
-    selectToggle.classList.add('custom-select__toggle--checked');
-    selectToggle.classList.remove('custom-select__toggle--unchecked');
-  } else {
-    // Close list
-    selectList.classList.add('custom-select__option-list--closed');
-    selectList.classList.remove('custom-select__option-list--opened');
-    selectList.removeEventListener('click', onSelectListClick);
-    selectToggle.classList.remove('custom-select__toggle--checked');
-    selectToggle.classList.add('custom-select__toggle--unchecked');
-  }
-});
-
-
-// Функция-обработчик выбора пункта селекта
-function onSelectListClick (evt) {
-  if (evt.target.tagName == 'SPAN') {
-    selectCurrentLabel.textContent = evt.target.textContent;
-    selectList.classList.add('custom-select__option-list--closed');
-    selectList.classList.remove('custom-select__option-list--opened');
-    selectToggle.classList.add('custom-select__toggle--unchecked');
-    selectToggle.classList.remove('custom-select__toggle--checked');
-  }
-}
+//
+// Slider
+//

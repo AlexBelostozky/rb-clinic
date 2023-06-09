@@ -1,4 +1,7 @@
 import gulp from 'gulp';
+import copy from 'gulp-copy';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
 import less from 'gulp-less';

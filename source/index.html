@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <link rel="preload" href="fonts/pt-sans-caption-regular.woff" as="font">
     <link rel="preload" href="fonts/pt-sans-caption-regular.woff2" as="font">
@@ -34,11 +35,11 @@
 
           <ul class="header__nav-list">
             <li class="header__nav-item header__nav-item--current">
-              <a class="header__nav-link">О клинике</a>
+              <a class="header__nav-link" href="#">О клинике</a>
             </li>
 
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#catalog">Услуги</a>
+              <a class="header__nav-link" href="#">Услуги</a>
             </li>
 
             <li class="header__nav-item">
@@ -54,20 +55,20 @@
             </li>
           </ul>
 
-          <a class="header__nav-button" href="#">Записаться на приём</a>
+          <a class="header__nav-enroll-button" href="#">Записаться на приём</a>
         </nav>
 
         <a class="header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/d2g-logo-large.svg" width="91" height="27">
-            <img src="img/d2g-logo-small.svg" width="62" height="18" alt="Логотип RB Clinic.">
+            <source media="(min-width: 768px)" srcset="img/rb-logo.svg" width="91" height="27">
+            <img src="img/rb-logo.svg" width="62" height="18" alt="Логотип RB Clinic.">
           </picture>
         </a>
 
         <div class="header__contacts-wrapper">
           <h3 class="visually-hidden">Контакты</h3>
 
-          <address class="header__contacts contacts">
+          <address class="header__contacts">
             <a class="header__contacts-address" href="https://go.2gis.com/vhj9e">
               <span class="header__contacts-city">Ростов-на-Дону</span>
               <span class="header__contacts-street">ул. Ленина, 2Б</span>
@@ -75,7 +76,7 @@
 
             <a class="header__contacts-phone" href="https://wa.me/+78630000000" target="_blank">
               <img class="header__contacts-wa-icon" src="img/icons/wa-icon.svg" width="28" height="28" alt="Связаться с нами в Whatsapp.">
-              <span class="header__contacts-wa-number">+7 (863) 000-00-00</span>
+              <span class="header__contacts-wa-number">+7(863) 000-00-00</span>
             </a>
           </address>
         </div>
@@ -102,196 +103,155 @@
         </picture>
       </section>
 
-      <section class="services">
-        <ul class="services__list">
+      <section class="services swiper">
+        <ul class="services__list swiper-wrapper">
           <!-- Для отображения слайда добавить модификатор show -->
-          <li class="services__item services__item--show service">
-            <article class="service__container">
-              <picture class="service__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <li class="services__item services__item--show service swiper-slide">
+              <article class="service__container">
+                <picture class="service__image">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
 
-                <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
 
-                <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-              </picture>
+                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
+                </picture>
 
-              <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
 
-              <ul class="service__composition">
-                <li class="service__composition-item">Гормональный скрининг</li>
+                <ul class="service__composition">
+                  <li class="service__composition-item">Гормональный скрининг</li>
 
-                <li class="service__composition-item">Тестостерон</li>
+                  <li class="service__composition-item">Тестостерон</li>
 
-                <li class="service__composition-item">Свободный тестостерон</li>
+                  <li class="service__composition-item">Свободный тестостерон</li>
 
-                <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-              </ul>
+                  <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
+                </ul>
 
-              <p class="service__price">Всего
-                <span class="service__price-actual">2800₽</span>
-                <span class="service__price-old">3500₽</span>
-              </p>
+                <p class="service__price">Всего
+                  <span class="service__price-actual">2800₽</span>
+                  <span class="service__price-old">3500₽</span>
+                </p>
 
-              <div class="service__button-container">
-                <a class="button-main" href="#">Записаться</a>
-                <a class="button-secondary" href="#">Подробнее</a>
-              </div>
-            </article>
-          </li>
+                <div class="service__button-container">
+                  <a class="button-main" href="#">Записаться</a>
+                  <a class="button-secondary" href="#">Подробнее</a>
+                </div>
+              </article>
+            </li>
 
-          <li class="services__item services__item--show service">
-            <article class="service__container">
-              <picture class="service__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <li class="services__item service swiper-slide">
+              <article class="service__container">
+                <picture class="service__image">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
 
-                <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
 
-                <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-              </picture>
+                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
+                </picture>
 
-              <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для всех</h1>
 
-              <ul class="service__composition">
-                <li class="service__composition-item">Гормональный скрининг</li>
+                <ul class="service__composition">
+                  <li class="service__composition-item">Гормональный скрининг</li>
 
-                <li class="service__composition-item">Тестостерон</li>
+                  <li class="service__composition-item">Общий анализ крови</li>
+                </ul>
 
-                <li class="service__composition-item">Свободный тестостерон</li>
+                <p class="service__price">Всего
+                  <span class="service__price-actual">1800₽</span>
+                  <span class="service__price-old">2500₽</span>
+                </p>
 
-                <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-              </ul>
+                <div class="service__button-container">
+                  <a class="button-main" href="#">Записаться</a>
+                  <a class="button-secondary" href="#">Подробнее</a>
+                </div>
+              </article>
+            </li>
 
-              <p class="service__price">Всего
-                <span class="service__price-actual">2800₽</span>
-                <span class="service__price-old">3500₽</span>
-              </p>
+          <li class="services__item service swiper-slide">
+              <article class="service__container">
+                <picture class="service__image">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
 
-              <div class="service__button-container">
-                <a class="button-main" href="#">Записаться</a>
-                <a class="button-secondary" href="#">Подробнее</a>
-              </div>
-            </article>
-          </li>
+                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
 
-          <li class="services__item services__item--show service">
-            <article class="service__container">
-              <picture class="service__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
+                </picture>
 
-                <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
 
-                <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-              </picture>
+                <ul class="service__composition">
+                  <li class="service__composition-item">Гормональный скрининг</li>
 
-              <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+                  <li class="service__composition-item">Тестостерон</li>
 
-              <ul class="service__composition">
-                <li class="service__composition-item">Гормональный скрининг</li>
+                  <li class="service__composition-item">Свободный тестостерон</li>
 
-                <li class="service__composition-item">Тестостерон</li>
+                  <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
+                </ul>
 
-                <li class="service__composition-item">Свободный тестостерон</li>
+                <p class="service__price">Всего
+                  <span class="service__price-actual">2800₽</span>
+                  <span class="service__price-old">3500₽</span>
+                </p>
 
-                <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-              </ul>
+                <div class="service__button-container">
+                  <a class="button-main" href="#">Записаться</a>
+                  <a class="button-secondary" href="#">Подробнее</a>
+                </div>
+              </article>
+            </li>
 
-              <p class="service__price">Всего
-                <span class="service__price-actual">2800₽</span>
-                <span class="service__price-old">3500₽</span>
-              </p>
+          <li class="services__item service swiper-slide">
+              <article class="service__container">
+                <picture class="service__image">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
+                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
 
-              <div class="service__button-container">
-                <a class="button-main" href="#">Записаться</a>
-                <a class="button-secondary" href="#">Подробнее</a>
-              </div>
-            </article>
-          </li>
+                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
+                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
 
-          <li class="services__item services__item--show service">
-            <article class="service__container">
-              <picture class="service__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
+                </picture>
 
-                <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
 
-                <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-              </picture>
+                <ul class="service__composition">
+                  <li class="service__composition-item">Гормональный скрининг</li>
 
-              <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+                  <li class="service__composition-item">Тестостерон</li>
 
-              <ul class="service__composition">
-                <li class="service__composition-item">Гормональный скрининг</li>
+                  <li class="service__composition-item">Свободный тестостерон</li>
 
-                <li class="service__composition-item">Тестостерон</li>
+                  <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
+                </ul>
 
-                <li class="service__composition-item">Свободный тестостерон</li>
+                <p class="service__price">Всего
+                  <span class="service__price-actual">2800₽</span>
+                  <span class="service__price-old">3500₽</span>
+                </p>
 
-                <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-              </ul>
-
-              <p class="service__price">Всего
-                <span class="service__price-actual">2800₽</span>
-                <span class="service__price-old">3500₽</span>
-              </p>
-
-              <div class="service__button-container">
-                <a class="button-main" href="#">Записаться</a>
-                <a class="button-secondary" href="#">Подробнее</a>
-              </div>
-            </article>
-          </li>
-
-          <li class="services__item services__item--show service">
-            <article class="service__container">
-              <picture class="service__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
-
-                <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
-
-                <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-              </picture>
-
-              <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
-
-              <ul class="service__composition">
-                <li class="service__composition-item">Гормональный скрининг</li>
-
-                <li class="service__composition-item">Тестостерон</li>
-
-                <li class="service__composition-item">Свободный тестостерон</li>
-
-                <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-              </ul>
-
-              <p class="service__price">Всего
-                <span class="service__price-actual">2800₽</span>
-                <span class="service__price-old">3500₽</span>
-              </p>
-
-              <div class="service__button-container">
-                <a class="button-main" href="#">Записаться</a>
-                <a class="button-secondary" href="#">Подробнее</a>
-              </div>
-            </article>
-          </li>
+                <div class="service__button-container">
+                  <a class="button-main" href="#">Записаться</a>
+                  <a class="button-secondary" href="#">Подробнее</a>
+                </div>
+              </article>
+            </li>
         </ul>
 
-        <div class="services__pagination pagination">
+        <!-- <div class="services__pagination pagination"> -->
           <a class="pagination__button pagination__button--prev" href="#">
             <span class="visually-hidden">Показать предыдущую услугу.</span>
             <svg class="pagination__button-icon" fill="currentColor">
@@ -311,7 +271,7 @@
               <use href="img/icons/stack.svg#nav-button-icon"></use>
             </svg>
           </a>
-        </div>
+        <!-- </div> -->
       </section>
     </main>
 
@@ -398,7 +358,7 @@
       </div>
     </footer>
 
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
   </body>
 
 </html>
