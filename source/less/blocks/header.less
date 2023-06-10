@@ -16,7 +16,7 @@
   position: fixed;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background-color: @white;
   width: 100%;
@@ -93,7 +93,7 @@
 .header__nav-button {
   position: relative;
   display: block;
-  margin-right: 6px;
+  margin-right: 27px;
   padding: 12px 14px;
   z-index: 2;
   outline: none;
@@ -269,7 +269,7 @@
   box-sizing: border-box;
   color: @light-green;
   line-height: 0;
-  padding: 23px;
+  padding: 23px 0;
 
   &:hover,
   &:focus,
@@ -288,7 +288,9 @@
 }
 
 .header__contacts-wrapper {
-  padding: 15px 18px 12px;
+  padding: 15px 18px 12px 0;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .header__contacts {
