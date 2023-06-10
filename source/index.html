@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <link rel="preload" href="fonts/pt-sans-caption-regular.woff" as="font">
     <link rel="preload" href="fonts/pt-sans-caption-regular.woff2" as="font">
@@ -86,40 +85,41 @@
     <main class="main">
       <section class="hero">
         <div class="hero__text-wrapper">
-          <h1 class="hero__title">Многопрофильная клиника для детей и взрослых</h1>
+          <h1 class="hero__title">Многопрофильная клиника для детей<br> и взрослых</h1>
 
           <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
         <picture class="hero__image">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-          <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/interior.webp 1x, img/interior@2x.webp 2x" width="950" height="532">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/interior.webp 1x, img/interior@2x.webp 2x" width="950" height="532">
+          <source type="image/webp" srcset="img/flat-white.webp 1x, img/interior@2x.webp 2x" width="375" height="288">
 
-          <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-          <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+          <source media="(min-width: 1440px)" srcset="img/interior.jpg 1x, img/interior@2x.jpg 2x" width="950" height="532">
+          <source media="(min-width: 768px)" srcset="img/interior.jpg 1x, img/interior@2x.jpg 2x" width="950" height="532">
 
-          <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
+          <img src="img/interior.jpg" srcset="img/interior@2x.jpg 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
         </picture>
       </section>
 
-      <section class="services swiper">
-        <ul class="services__list swiper-wrapper">
+      <section class="services">
+        <ul class="services__list">
           <!-- Для отображения слайда добавить модификатор show -->
-          <li class="services__item services__item--show service swiper-slide">
-              <article class="service__container">
-                <picture class="service__image">
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <li class="services__item services__item--show service">
+            <article class="service__container">
+              <picture class="service__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" srcset="img/checkup-mobile.webp 1x, img/checkup-mobile@2x.webp 2x" width="340" height="169">
 
-                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                <source media="(min-width: 1440px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
+                <source media="(min-width: 768px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
 
-                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-                </picture>
+                <img src="img/checkup-mobile.jpg" srcset="img/checkup-mobile@2x.jpg 2x" width="340" height="169" alt="Врач делает заметки в записной книжке.">
+              </picture>
 
-                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+              <div class="service__description-wrapper">
+                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h1>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Гормональный скрининг</li>
@@ -137,26 +137,28 @@
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button-main" href="#">Записаться</a>
-                  <a class="button-secondary" href="#">Подробнее</a>
+                  <a class="button button--main" href="#">Записаться</a>
+                  <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
-              </article>
-            </li>
+              </div>
+            </article>
+          </li>
 
-          <li class="services__item service swiper-slide">
-              <article class="service__container">
-                <picture class="service__image">
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <li class="services__item service">
+            <article class="service__container">
+              <picture class="service__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" srcset="img/checkup-mobile.webp 1x, img/checkup-mobile@2x.webp 2x" width="340" height="169">
 
-                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                <source media="(min-width: 1440px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
+                <source media="(min-width: 768px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
 
-                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-                </picture>
+                <img src="img/checkup-mobile.jpg" srcset="img/checkup-mobile@2x.jpg 2x" width="340" height="169" alt="Врач делает заметки в записной книжке.">
+              </picture>
 
-                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для всех</h1>
+              <div class="service__description-wrapper">
+                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для всех</h1>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Гормональный скрининг</li>
@@ -173,60 +175,25 @@
                   <a class="button-main" href="#">Записаться</a>
                   <a class="button-secondary" href="#">Подробнее</a>
                 </div>
-              </article>
-            </li>
+              </div>
+            </article>
+          </li>
 
-          <li class="services__item service swiper-slide">
-              <article class="service__container">
-                <picture class="service__image">
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
+          <li class="services__item service">
+            <article class="service__container">
+              <picture class="service__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" srcset="img/checkup-mobile.webp 1x, img/checkup-mobile@2x.webp 2x" width="340" height="169">
 
-                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
+                <source media="(min-width: 1440px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
+                <source media="(min-width: 768px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
 
-                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-                </picture>
+                <img src="img/checkup-mobile.jpg" srcset="img/checkup-mobile@2x.jpg 2x" width="340" height="169" alt="Врач делает заметки в записной книжке.">
+              </picture>
 
-                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
-
-                <ul class="service__composition">
-                  <li class="service__composition-item">Гормональный скрининг</li>
-
-                  <li class="service__composition-item">Тестостерон</li>
-
-                  <li class="service__composition-item">Свободный тестостерон</li>
-
-                  <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
-                </ul>
-
-                <p class="service__price">Всего
-                  <span class="service__price-actual">2800₽</span>
-                  <span class="service__price-old">3500₽</span>
-                </p>
-
-                <div class="service__button-container">
-                  <a class="button-main" href="#">Записаться</a>
-                  <a class="button-secondary" href="#">Подробнее</a>
-                </div>
-              </article>
-            </li>
-
-          <li class="services__item service swiper-slide">
-              <article class="service__container">
-                <picture class="service__image">
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x" width="950" height="532">
-                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x" width="375" height="288">
-
-                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x" width="950" height="532">
-                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x" width="950" height="532">
-
-                  <img src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png 2x" width="375" height="288" alt="Интерьер нашей клиники. Светлое помещение с мягкой скамейкой, кондиционером, обеззараживателем воздуха, столиком и стульчиками для детей, доской для рисования, игрушками, пеленальным столом.">
-                </picture>
-
-                <h1 class="service__title"><span class="service__title-highlight">Check Up</span> для мужчин</h1>
+              <div class="service__description-wrapper">
+                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h1>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Гормональный скрининг</li>
@@ -247,15 +214,55 @@
                   <a class="button-main" href="#">Записаться</a>
                   <a class="button-secondary" href="#">Подробнее</a>
                 </div>
-              </article>
-            </li>
+              </div>
+            </article>
+          </li>
+
+          <li class="services__item service">
+            <article class="service__container">
+              <picture class="service__image">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
+                <source type="image/webp" srcset="img/checkup-mobile.webp 1x, img/checkup-mobile@2x.webp 2x" width="340" height="169">
+
+                <source media="(min-width: 1440px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
+                <source media="(min-width: 768px)" srcset="img/checkup-desktop.jpg 1x, img/checkup-desktop@2x.jpg 2x" width="692" height="440">
+
+                <img src="img/checkup-mobile.jpg" srcset="img/checkup-mobile@2x.jpg 2x" width="340" height="169" alt="Врач делает заметки в записной книжке.">
+              </picture>
+
+              <div class="service__description-wrapper">
+                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h1>
+
+                <ul class="service__composition">
+                  <li class="service__composition-item">Гормональный скрининг</li>
+
+                  <li class="service__composition-item">Тестостерон</li>
+
+                  <li class="service__composition-item">Свободный тестостерон</li>
+
+                  <li class="service__composition-item">Глобулин, связывающий половые гормоны</li>
+                </ul>
+
+                <p class="service__price">Всего
+                  <span class="service__price-actual">2800₽</span>
+                  <span class="service__price-old">3500₽</span>
+                </p>
+
+                <div class="service__button-container">
+                  <a class="button-main" href="#">Записаться</a>
+                  <a class="button-secondary" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </li>
         </ul>
 
-        <!-- <div class="services__pagination pagination"> -->
+        <div class="services__pagination pagination">
           <a class="pagination__button pagination__button--prev" href="#">
             <span class="visually-hidden">Показать предыдущую услугу.</span>
-            <svg class="pagination__button-icon" fill="currentColor">
-              <use href="img/icons/stack.svg#nav-button-icon"></use>
+            <svg class="pagination__button-icon" width="34" height="16" fill="currentColor">
+              <use href="img/icons/stack.svg#pagination-arrow"></use>
             </svg>
           </a>
 
@@ -267,11 +274,11 @@
 
           <a class="pagination__button pagination__button--next" href="#">
             <span class="visually-hidden">Показать следующую услугу.</span>
-            <svg class="pagination__button-icon" fill="currentColor">
-              <use href="img/icons/stack.svg#nav-button-icon"></use>
+            <svg class="pagination__button-icon" width="34" height="16" fill="currentColor">
+              <use href="img/icons/stack.svg#pagination-arrow"></use>
             </svg>
           </a>
-        <!-- </div> -->
+        </div>
       </section>
     </main>
 

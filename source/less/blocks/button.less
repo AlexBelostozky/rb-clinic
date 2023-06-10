@@ -1,0 +1,36 @@
+.button {
+  display: block;
+  font-family: "PT Sans Caption", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  padding: 11px;
+}
+
+.button--main {
+  color: @white;
+  background-color: @light-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @lightest-green;
+  }
+}
+
+.button--secondary {
+  color: @light-green;
+  background-color: transparent;
+  border: 1px solid @light-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @light-green;
+    color: @white;
+  }
+}

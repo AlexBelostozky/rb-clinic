@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 169px;
+}
+
+.pagination__button {
+  line-height: 0;
+  font-size: 0;
+  color: @neutral-gray;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @light-green;
+  }
+}
+
+.pagination__button--next {
+  transform: rotateZ(180deg);
+}
