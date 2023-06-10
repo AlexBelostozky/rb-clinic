@@ -267,12 +267,24 @@
 .header__logo {
   display: block;
   box-sizing: border-box;
+  color: @light-green;
   line-height: 0;
   padding: 23px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @lightest-green;
+  }
 
   // @media (min-width: @desktop-width) {
   //   margin-right: 20px;
   // }
+}
+
+.header__logo-image {
+  width: 62px;
+  height: 18px;
 }
 
 .header__contacts-wrapper {

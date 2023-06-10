@@ -58,10 +58,10 @@
         </nav>
 
         <a class="header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/rb-logo.svg" width="91" height="27">
-            <img src="img/rb-logo.svg" width="62" height="18" alt="Логотип RB Clinic.">
-          </picture>
+          <span class="visually-hidden">Логотип RB Clinic.</span>
+          <svg class="header__logo-image" fill="currentColor">
+            <use href="img/icons/stack.svg#rb-logo"></use>
+          </svg>
         </a>
 
         <div class="header__contacts-wrapper">
@@ -267,9 +267,7 @@
           </a>
 
           <span class="pagination__page-label">
-            <span class="pagination__page-current">1</span>
-            /
-            <span class="pagination__page-amount">4</span>
+            <span class="pagination__page-current">1</span>/<span class="pagination__page-amount">4</span>
           </span>
 
           <a class="pagination__button pagination__button--next" href="#">
@@ -287,8 +285,8 @@
         <div class="footer__logo-nav-wrapper">
           <a class="footer__logo" href="index.html">
             <span class="visually-hidden">Логотип RB Clinic.</span>
-            <svg class="footer__logo-icon" fill="currentColor">
-              <use href="img/icons/stack.svg#rb-icon"></use>
+            <svg class="footer__logo-image" fill="currentColor">
+              <use href="img/icons/stack.svg#rb-logo"></use>
             </svg>
           </a>
 
@@ -297,7 +295,7 @@
 
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a class="footer__nav-link">О клинике</a>
+                <a class="footer__nav-link" href="#">О клинике</a>
               </li>
 
               <li class="footer__nav-item">
@@ -322,42 +320,46 @@
         <h3 class="visually-hidden">Наши социальные сети.</h3>
         <ul class="footer__social social-list">
           <li class="social-list__item">
-            <a class="social-list__button" href="#">
+            <a class="social-list__button" target="_blank" href="https://instagram.com">
               <picture class="social-list__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" srcset="img/instagram-icon.webp 1x, img/instagram-icon@2x.webp 2x" width="24" height="24">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/instagram-icon-tablet.webp 1x, img/instagram-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/instagram-icon-tablet.webp 1x, img/instagram-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/instagram-icon-mobile.webp 1x, img/instagram-icon-mobile@2x.webp 2x" width="24" height="24">
 
-                <source media="(min-width: 1440px)" srcset="img/instagram-icon.png 1x, img/instagram-icon@2x.png 2x" width="35" height="35">
-                <source media="(min-width: 768px)" srcset="img/instagram-icon.png 1x, img/instagram-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 1440px)" srcset="img/instagram-icon-tablet.png 1x, img/instagram-icon-tablet@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/instagram-icon-tablet.png 1x, img/instagram-icon-tablet@2x.png 2x" width="35" height="35">
 
-                <img src="img/instagram-icon.png" srcset="img/instagram-icon@2x.png 2x" width="24" height="24" alt="Instagram.">
+                <img src="img/instagram-icon-mobile.png" srcset="img/instagram-icon-mobile@2x.png 2x" width="24" height="24" alt="Instagram.">
               </picture>
             </a>
+          </li>
 
-            <a class="social-list__button" href="#">
+          </li>
+            <a class="social-list__button" target="_blank" href="https://wa.me/+78630000000">
               <picture class="social-list__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" srcset="img/whatsapp-icon.webp 1x, img/whatsapp-icon@2x.webp 2x" width="24" height="24">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/whatsapp-icon-tablet.webp 1x, img/whatsapp-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/whatsapp-icon-tablet.webp 1x, img/whatsapp-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/whatsapp-icon-mobile.webp 1x, img/whatsapp-icon-mobile@2x.webp 2x" width="24" height="24">
 
-                <source media="(min-width: 1440px)" srcset="img/whatsapp-icon.png 1x, img/whatsapp-icon@2x.png 2x" width="35" height="35">
-                <source media="(min-width: 768px)" srcset="img/whatsapp-icon.png 1x, img/whatsapp-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 1440px)" srcset="img/whatsapp-icon-tablet.png 1x, img/whatsapp-icon-tablet@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/whatsapp-icon-tablet.png 1x, img/whatsapp-icon-tablet@2x.png 2x" width="35" height="35">
 
-                <img src="img/whatsapp-icon.png" srcset="img/whatsapp-icon@2x.png 2x" width="24" height="24" alt="Whatsapp.">
+                <img src="img/whatsapp-icon-mobile.png" srcset="img/whatsapp-icon-mobile@2x.png 2x" width="24" height="24" alt="Whatsapp.">
               </picture>
             </a>
+          </li>
 
-            <a class="social-list__button" href="#">
+          </li>
+            <a class="social-list__button" target="_blank" href="https://t.me/+78630000000">
               <picture class="social-list__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="35" height="35">
-                <source type="image/webp" srcset="img/telegram-icon.webp 1x, img/telegram-icon@2x.webp 2x" width="24" height="24">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/telegram-icon-tablet.webp 1x, img/telegram-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/telegram-icon-tablet.webp 1x, img/telegram-icon-tablet@2x.webp 2x" width="35" height="35">
+                <source type="image/webp" srcset="img/telegram-icon-mobile.webp 1x, img/telegram-icon-mobile@2x.webp 2x" width="24" height="24">
 
-                <source media="(min-width: 1440px)" srcset="img/telegram-icon.png 1x, img/telegram-icon@2x.png 2x" width="35" height="35">
-                <source media="(min-width: 768px)" srcset="img/telegram-icon.png 1x, img/telegram-icon@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 1440px)" srcset="img/telegram-icon-tablet.png 1x, img/telegram-icon-tablet@2x.png 2x" width="35" height="35">
+                <source media="(min-width: 768px)" srcset="img/telegram-icon-tablet.png 1x, img/telegram-icon-tablet@2x.png 2x" width="35" height="35">
 
-                <img src="img/telegram-icon.png" srcset="img/telegram-icon@2x.png 2x" width="24" height="24" alt="Telegram.">
+                <img src="img/telegram-icon-mobile.png" srcset="img/telegram-icon-mobile@2x.png 2x" width="24" height="24" alt="Telegram.">
               </picture>
             </a>
           </li>
