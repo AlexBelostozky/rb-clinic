@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-.social-list__item {
-
-}
-
 .social-list__button {
   display: block;
   box-sizing: border-box;
@@ -25,6 +21,11 @@
   &:active {
     box-shadow: 0 0 10px @neutral-gray;
     outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    height: auto;
   }
 }
 

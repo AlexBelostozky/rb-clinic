@@ -1,11 +1,7 @@
-.service {
-
-}
-
 .service__container {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 493px 645px;
+    grid-template-columns: 496px 644px;
   }
 }
 
@@ -24,6 +20,7 @@
       object-fit: cover;
       object-position: right;
       height: 100%;
+      width: 100%;
     }
 
     &::before {
@@ -46,7 +43,7 @@
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
-    width: 493px;
+    width: 496px;
     padding: 53px 23px 56px 63px;
   }
 }
@@ -155,4 +152,9 @@
   display: grid;
   grid-template-columns: 137px 137px;
   grid-gap: 6px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 196px 196px;
+    grid-gap: 14px;
+  }
 }
