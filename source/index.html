@@ -74,11 +74,18 @@
             </a>
 
             <a class="header__contacts-phone" href="https://wa.me/+78630000000" target="_blank">
-              <img class="header__contacts-wa-icon" src="img/icons/wa-icon.svg" width="28" height="28" alt="Связаться с нами в Whatsapp.">
+              <picture class="header__contacts-wa-icon">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/whatsapp-icon-tablet.webp 1x, img/whatsapp-icon-tablet@2x.webp 2x" width="24" height="24">
+
+                <img src="img/whatsapp-icon-tablet.png" srcset="img/whatsapp-icon-tablet@2x.png 2x" width="24" height="24" alt="Связаться с нами в Whatsapp.">
+              </picture>
+
               <span class="header__contacts-wa-number">+7(863) 000-00-00</span>
             </a>
           </address>
         </div>
+
+        <a class="header__enroll-button" href="#">Записаться на приём</a>
       </div>
     </header>
 
