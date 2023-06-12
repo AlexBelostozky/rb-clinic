@@ -26,11 +26,10 @@ navToggle.addEventListener('click', function () {
 // Slider
 //
 const slider = document.querySelector('.services');
-const sliderImages = document.querySelectorAll('.services__item');
+const sliderCards = document.querySelectorAll('.services__item');
 const sliderLine = document.querySelector('.services__list');
 
-const sliderBtnNext = document.querySelector('.pagination__button--next');
-const sliderBtnPrev = document.querySelector('.pagination__button--prev');
+const pagination = document.querySelector('.pagination');
 
 const paginationCurrent = document.querySelector('.pagination__page-current');
 const paginationAmount = document.querySelector('.pagination__page-amount');
@@ -38,10 +37,9 @@ const paginationAmount = document.querySelector('.pagination__page-amount');
 let sliderCount = 0;
 let sliderWidth = slider.offsetWidth;
 
-paginationAmount.textContent = sliderImages.length;
+paginationAmount.textContent = sliderCards.length;
 
-sliderBtnNext.addEventListener('click', goToNextSlide);
-sliderBtnPrev.addEventListener('click', goToPrevSlide);
+pagination.addEventListener('click', onPaginationClick);
 window.addEventListener('resize', updateSliderWidth);
 
 function updateSliderWidth () {
@@ -54,23 +52,23 @@ function resetSlider () {
   changeSlide();
 }
 
-function goToNextSlide (evt) {
+function onPaginationClick (evt) {
   evt.preventDefault();
-  sliderCount++;
 
-  if (sliderCount >= sliderImages.length) {
-    sliderCount = 0;
+  if (evt.target.closest('.pagination__button--next')) {
+    sliderCount++;
+
+    if (sliderCount >= sliderCards.length) {
+      sliderCount = 0;
+    }
   }
 
-  changeSlide();
-}
+  if (evt.target.closest('.pagination__button--prev')) {
+    sliderCount--;
 
-function goToPrevSlide (evt) {
-  evt.preventDefault();
-  sliderCount--;
-
-  if (sliderCount < 0) {
-    sliderCount = sliderImages.length - 1;
+    if (sliderCount < 0) {
+      sliderCount = sliderCards.length - 1;
+    }
   }
 
   changeSlide();
