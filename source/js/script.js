@@ -35,6 +35,7 @@ const paginationCurrent = document.querySelector('.pagination__page-current');
 const paginationAmount = document.querySelector('.pagination__page-amount');
 
 let sliderCount = 0;
+// let sliderCountPrev = 0;
 let sliderWidth = slider.offsetWidth;
 
 paginationAmount.textContent = sliderCards.length;
@@ -56,6 +57,7 @@ function onPaginationClick (evt) {
   evt.preventDefault();
 
   if (evt.target.closest('.pagination__button--next')) {
+    // sliderCountPrev = sliderCount;
     sliderCount++;
 
     if (sliderCount >= sliderCards.length) {
@@ -64,6 +66,7 @@ function onPaginationClick (evt) {
   }
 
   if (evt.target.closest('.pagination__button--prev')) {
+    // sliderCountPrev = sliderCount;
     sliderCount--;
 
     if (sliderCount < 0) {
@@ -76,6 +79,9 @@ function onPaginationClick (evt) {
 
 function changeSlide () {
   sliderLine.style.transform = `translateX(${- sliderCount * sliderWidth}px)`;
+  // sliderCards[sliderCountPrev].classList.remove('services__item--show');
+  // sliderCards[sliderCount].classList.add('services__item--show');
+
   updatePagination();
 }
 
