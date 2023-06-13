@@ -114,7 +114,7 @@ function reloadServer (done) {
 
 function watchFiles () {
   gulp.watch('source/less/**/*.less', gulp.series(processStyles));
-  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/js/*.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 
