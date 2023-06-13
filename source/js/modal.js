@@ -5,12 +5,16 @@ import {sendRequest} from './api.js';
 const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.header__nav');
 const modal = document.querySelector('.modal');
+const modalForm = document.querySelector('.modal__form')
 const resetButton = document.querySelector('.modal__button--reset');
 const closeModalButton = document.querySelector('.modal__button--close');
 const submitButton = document.querySelector('.modal__button--submit');
 const modalInputs = document.querySelectorAll('.modal__input');
-const phoneInput = document.getElementById('client-phone');
 const nameInput = document.getElementById('client-name');
+const phoneInput = document.getElementById('client-phone');
+const nameErrorLabel = document.querySelector('.modal__input-error--name');
+const phoneErrorLabel = document.querySelector('.modal__input-error--phone');
+const modalLoader = document.querySelector('.modal__form-loader');
 
 function openModal () {
   modal.classList.remove('modal--hide');
@@ -24,6 +28,7 @@ function openModal () {
   });
 
   // Заполнение формы
+  nameInput.addEventListener('input', onNameInputChange);
   phoneInput.addEventListener('keydown', onPhoneInputKeydown);
   phoneInput.addEventListener('input', onPhoneInputChange);
 
@@ -35,10 +40,6 @@ function openModal () {
   // Отправка формы
   submitButton.addEventListener('click', onSubmitButtonClick);
 
-  // Отображение лоадера
-
-  // Отображение статуса отправки
-
   // Закрытие формы
   closeModalButton.addEventListener('click', onCloseModalButtonClick);
 }
@@ -48,17 +49,20 @@ function onSubmitButtonClick (evt) {
 
   // Проверка инпутов
   let isValidInputs = nameInput.validity.valid && phoneInput.validity.valid;
-  console.log('Valid ' + isValidInputs);
   let isEmptyInputs = !nameInput.value || !phoneInput.value;
-  console.log('NotEmpty ' + !isEmptyInputs);
 
   if (isValidInputs && !isEmptyInputs) {
-    sendRequest();
+    sendRequest(
+      modalForm,
+      showLoader,
+      setSuccessLoader,
+      setFailLoader,
+      closeModal
+    );
   } else {
-    nameInput.checkValidity();
-    phoneInput.checkValidity();
+    validateNameInput();
+    validatePhoneNumber();
   }
-
 }
 
 function onCloseModalButtonClick (evt) {
@@ -70,10 +74,16 @@ function onCloseModalButtonClick (evt) {
 function closeModal () {
   modal.classList.add('modal--hide');
   nameInput.classList.remove('modal__input--valid');
+  nameInput.removeAttribute('required');
   nameInput.value = '';
+  nameInput.setCustomValidity("");
+  nameErrorLabel.textContent = nameInput.validationMessage;
   phoneInput.classList.remove('modal__input--valid');
   phoneInput.removeAttribute('required');
   phoneInput.value = '';
+  phoneInput.setCustomValidity("");
+  phoneErrorLabel.textContent = phoneInput.validationMessage;
+  modalLoader.style.display = 'none';
   if (navMain.classList.contains('header__nav--closed')) {
     // Если навигация закрыта, то можно разблокировать скролл
     body.classList.remove('page__body--locked');
@@ -100,11 +110,13 @@ function validateNameInput () {
     nameInput.classList.add('modal__input--valid');
     nameInput.removeAttribute('pattern');
     nameInput.setCustomValidity("");
+    nameErrorLabel.textContent = nameInput.validationMessage;
     return true
   } else {
     nameInput.classList.remove('modal__input--valid');
     nameInput.setAttribute('pattern', `/^[\p{L}\p{M}'\s]+$/u`);
-    nameInput.setCustomValidity("Только буквы.");
+    nameInput.setCustomValidity("Имя должно состоять только из букв.");
+    nameErrorLabel.textContent = nameInput.validationMessage;
     return false
   }
 }
@@ -115,13 +127,21 @@ function onPhoneInputKeydown (evt) {
   }
 }
 
-function onPhoneInputChange (evt) {
+function onNameInputChange () {
+  formatName(nameInput);
+}
+
+function formatName(input) {
+  input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
+}
+
+function onPhoneInputChange () {
   formatPhoneNumber(phoneInput);
 }
 
 function onPhoneInputBlur () {
   phoneInput.setAttribute('required', '');
-  validatePhoneNumber(phoneInput);
+  validatePhoneNumber();
 }
 
 function formatPhoneNumber (input) {
@@ -139,19 +159,33 @@ function formatPhoneNumber (input) {
   }
 }
 
-function validatePhoneNumber (phoneNumber) {
-  const userInput = phoneNumber.value.replace(/^\+7|\D/g,'').substring(0,10);
-
+function validatePhoneNumber () {
+  const userInput = phoneInput.value.replace(/^\+7|\D/g,'').substring(0,10);
   if (userInput.length === 10) {
     phoneInput.classList.add('modal__input--valid');
     phoneInput.setCustomValidity("");
+    phoneErrorLabel.textContent = phoneInput.validationMessage;
     phoneInput.removeAttribute('pattern');
     return true
   } else {
     phoneInput.classList.remove('modal__input--valid');
     phoneInput.setCustomValidity("Недостаточно символов.");
+    phoneErrorLabel.textContent = phoneInput.validationMessage;
     return false
   }
+}
+
+function showLoader () {
+  modalLoader.style.display = 'flex';
+  modalLoader.innerHTML = 'Записываем...<br>✍️';
+}
+
+function setSuccessLoader () {
+  modalLoader.innerHTML = 'Готово!<br>✅';
+}
+
+function setFailLoader () {
+  modalLoader.innerHTML = 'Что-то пошло не так...<br>🙅‍♂️';
 }
 
 export {openModal};
