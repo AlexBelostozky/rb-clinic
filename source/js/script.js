@@ -119,6 +119,7 @@ function openModal () {
   });
 
   // Заполнение формы
+  phoneInput.addEventListener('keydown', onPhoneInputKeydown);
   phoneInput.addEventListener('input', onPhoneInputChange);
 
 
@@ -145,15 +146,14 @@ function closeModal () {
   modal.classList.add('modal--hide');
   nameInput.classList.remove('modal__input--valid');
   nameInput.value = '';
+  phoneInput.classList.remove('modal__input--valid');
+  phoneInput.removeAttribute('required');
+  phoneInput.value = '';
   if (navMain.classList.contains('header__nav--closed')) {
     // Если навигация закрыта, то можно разблокировать скролл
     body.classList.remove('page__body--locked');
   }
   closeModalButton.removeEventListener('click', onCloseModalButtonClick);
-}
-
-function onPhoneInputChange (evt) {
-  console.log(evt.target.value);
 }
 
 function onNameInputBlur () {
@@ -163,16 +163,70 @@ function onNameInputBlur () {
   if (lettersRegExp.test(nameInput.value)) {
     nameInput.classList.add('modal__input--valid');
     nameInput.removeAttribute('pattern');
+    nameInput.setCustomValidity("");
     return true
   } else {
     nameInput.classList.remove('modal__input--valid');
     nameInput.setAttribute('pattern', `/^[\p{L}\p{M}'\s]+$/u`);
+    nameInput.setCustomValidity("Только буквы.");
     return false
   }
 }
 
+function onPhoneInputKeydown (evt) {
+  if (!isNumericInput(evt) && !isModifierKey(evt)){
+    event.preventDefault();
+  }
+}
+
+function isNumericInput (evt) {
+  const key = event.keyCode;
+  return ((key >= 48 && key <= 57) || (key >= 96 && key <= 105))
+}
+
+function isModifierKey(evt) {
+  const key = evt.keyCode;
+  return (evt.shiftKey === true || key === 35 || key === 36) || // Разрешить Shift, Home, End
+        (key === 8 || key === 9 || key === 13 || key === 46) || // Разрешить Backspace, Tab, Enter, Delete
+        (key > 36 && key < 41) || // Разрешить left, up, right, down
+        (evt.ctrlKey === true || evt.metaKey === true) // Разрешить control, command
+}
+
+function onPhoneInputChange (evt) {
+  formatPhoneNumber(phoneInput);
+}
+
 function onPhoneInputBlur () {
   phoneInput.setAttribute('required', '');
+  validatePhoneNumber(phoneInput);
+}
 
+function formatPhoneNumber (input) {
+  const userInput = input.value.replace(/^\+7|\D/g,'').substring(0,10);
+  const areaCode = userInput.substring(0,3);
+  const middle = userInput.substring(3,6);
+  const last = userInput.substring(6,10);
 
+  if (userInput.length > 6) {
+    input.value = `+7 (${areaCode}) ${middle}–${last}`;
+  } else if (userInput.length > 3) {
+    input.value = `+7 (${areaCode}) ${middle}`;
+  } else if (userInput.length > 0) {
+    input.value = `+7 (${areaCode}`;
+  }
+}
+
+function validatePhoneNumber (phoneNumber) {
+  const userInput = phoneNumber.value.replace(/^\+7|\D/g,'').substring(0,10);
+
+  if (userInput.length === 10) {
+    phoneInput.classList.add('modal__input--valid');
+    phoneInput.setCustomValidity("");
+    phoneInput.removeAttribute('pattern');
+    return true
+  } else {
+    phoneInput.classList.remove('modal__input--valid');
+    phoneInput.setCustomValidity("Недостаточно символов.");
+    return false
+  }
 }
