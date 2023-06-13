@@ -54,7 +54,7 @@
             </li>
           </ul>
 
-          <a class="header__nav-enroll-button" href="#">Записаться на приём</a>
+          <a class="header__nav-enroll-button enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться на приём</a>
         </nav>
 
         <a class="header__logo" href="index.html">
@@ -85,7 +85,7 @@
           </address>
         </div>
 
-        <a class="header__enroll-button" href="#">Записаться на приём</a>
+        <a class="header__enroll-button enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться на приём</a>
       </div>
     </header>
 
@@ -108,6 +108,7 @@
       </section>
 
       <section class="services">
+        <h2 class="visually-hidden">Наши услуги.</h2>
         <ul class="services__list">
           <li class="services__item service">
             <article class="service__container">
@@ -139,7 +140,7 @@
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main" href="#">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
@@ -172,7 +173,7 @@
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main" href="#">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
@@ -209,7 +210,7 @@
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main" href="#">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
@@ -246,7 +247,7 @@
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main" href="#">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
@@ -313,7 +314,7 @@
           </nav>
         </div>
 
-        <h3 class="visually-hidden">Наши социальные сети.</h3>
+        <h2 class="visually-hidden">Наши социальные сети.</h3>
         <ul class="footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__button" target="_blank" href="https://instagram.com">
@@ -356,6 +357,32 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Для отображения модального окна удалить модификатор hide -->
+    <div class="modal modal--hide">
+      <section class="modal__container">
+        <h2 class="modal__heading">Запись на приём</h2>
+
+        <p class="modal__description">
+          Для записи на приём оставьте, пожалуйста, ваши контактные данные. Мы вам перезвоним.
+        </p>
+
+        <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <label class="modal__label" for="#client-name">Ваше имя</label>
+          <input class="modal__input" id="client-name" type="text" name="client-name" value="" placeholder="Ваше имя" autocomplete="off">
+
+          <label class="modal__label" for="#client-phone">Ваш телефон</label>
+          <input class="modal__input" id="client-phone" type="number" name="client-phone" value="" placeholder="+7 (___) ___-__-__" autocomplete="off">
+
+          <div class="modal__button-wrapper">
+            <button class="modal__button modal__button--reset" type="reset" name="reset-button">Очистить</button>
+            <button class="modal__button modal__button--submit"type="submit" name="submit-button">Записаться</button>
+          </div>
+        </form>
+
+        <a class="modal__button modal__button--close" href="index.html">Закрыть</a>
+      </section>
+    </div>
 
     <script src="./js/script.js" type="module"></script>
   </body>
