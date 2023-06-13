@@ -1,10 +1,12 @@
 import {isNumericInput} from './utils.js';
 import {isModifierKey} from './utils.js';
+import {isEscKeyPressed} from './utils.js';
 import {sendRequest} from './api.js';
 
 const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.header__nav');
 const modal = document.querySelector('.modal');
+const modalContainer = document.querySelector('.modal__container');
 const modalForm = document.querySelector('.modal__form')
 const resetButton = document.querySelector('.modal__button--reset');
 const closeModalButton = document.querySelector('.modal__button--close');
@@ -42,6 +44,8 @@ function openModal () {
 
   // Закрытие формы
   closeModalButton.addEventListener('click', onCloseModalButtonClick);
+  document.addEventListener('keydown', onModalEscKeydown);
+  document.addEventListener('mousedown', outsideModalClick);
 }
 
 function onSubmitButtonClick (evt) {
@@ -71,6 +75,21 @@ function onCloseModalButtonClick (evt) {
   closeModal();
 }
 
+function onModalEscKeydown (evt) {
+  if (isEscKeyPressed(evt)) {
+    evt.preventDefault();
+
+    closeModal();
+  }
+}
+
+function outsideModalClick (evt) {
+  if (!modalContainer.contains(evt.target)) {
+
+    closeModal();
+  }
+}
+
 function closeModal () {
   modal.classList.add('modal--hide');
   nameInput.classList.remove('modal__input--valid');
@@ -88,6 +107,15 @@ function closeModal () {
     // Если навигация закрыта, то можно разблокировать скролл
     body.classList.remove('page__body--locked');
   }
+  resetButton.removeEventListener('click', onResetButtonClick);
+  nameInput.removeEventListener('input', onNameInputChange);
+  phoneInput.removeEventListener('keydown', onPhoneInputKeydown);
+  phoneInput.removeEventListener('input', onPhoneInputChange);
+  nameInput.removeEventListener('blur', onNameInputBlur);
+  phoneInput.removeEventListener('blur', onPhoneInputBlur);
+  submitButton.removeEventListener('click', onSubmitButtonClick);
+  document.removeEventListener('keydown', onModalEscKeydown);
+  document.removeEventListener('mousedown', outsideModalClick);
   closeModalButton.removeEventListener('click', onCloseModalButtonClick);
 }
 
