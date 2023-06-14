@@ -1,0 +1,1 @@
+function isNumericInput(e){const t=event.keyCode;return t>=48&&t<=57||t>=96&&t<=105}function isModifierKey(e){const t=e.keyCode;return!0===e.shiftKey||35===t||36===t||8===t||9===t||13===t||46===t||t>36&&t<41||!0===e.ctrlKey||!0===e.metaKey}function isEscKeyPressed(e){return"Escape"===e.key}export{isNumericInput};export{isModifierKey};export{isEscKeyPressed};

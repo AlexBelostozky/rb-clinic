@@ -1,0 +1,1 @@
+const DATA_URL="https://jsonplaceholder.typicode.com/posts";async function sendRequest(t,e,o,s,n){try{e();const c=new FormData(t),a={method:"POST",body:JSON.stringify(c),headers:{"Content-type":"application/json; charset=UTF-8"}};(await fetch(DATA_URL,a)).ok?o():s()}catch(t){console.log("Ошибка: "+t)}finally{setTimeout((()=>{n()}),2500)}}export{sendRequest};
