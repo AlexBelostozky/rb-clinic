@@ -30,7 +30,7 @@
 
         <!-- Для отображения меню заменить модификатор объекта header__nav с closed на opened -->
         <nav class="header__nav header__nav--opened">
-          <h2 class="visually-hidden">Навигация.</h2>
+          <p class="visually-hidden">Навигация.</p>
 
           <ul class="header__nav-list">
             <li class="header__nav-item header__nav-item--current">
@@ -65,7 +65,7 @@
         </a>
 
         <div class="header__contacts-wrapper">
-          <h3 class="visually-hidden">Контакты</h3>
+          <p class="visually-hidden">Контакты</p>
 
           <address class="header__contacts">
             <a class="header__contacts-address" href="https://go.2gis.com/vhj9e">
@@ -80,7 +80,7 @@
                 <img src="img/whatsapp-icon-tablet.png" srcset="img/whatsapp-icon-tablet@2x.png 2x" width="24" height="24" alt="Связаться с нами в Whatsapp.">
               </picture>
 
-              <span class="header__contacts-wa-number">+7(863) 000-00-00</span>
+              <span class="header__contacts-wa-number">+7(863) 000 00 00</span>
             </a>
           </address>
         </div>
@@ -122,7 +122,7 @@
               </picture>
 
               <div class="service__description-wrapper">
-                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h1>
+                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h3>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Гормональный скрининг</li>
@@ -159,7 +159,7 @@
               </picture>
 
               <div class="service__description-wrapper">
-                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для всех</h1>
+                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для всех</h3>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Гормональный скрининг</li>
@@ -192,7 +192,7 @@
               </picture>
 
               <div class="service__description-wrapper">
-                <h1 class="service__title"><span class="service__title-highlight">Check-Up</span> для детей</h1>
+                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для детей</h3>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Анализ на витамин D</li>
@@ -229,7 +229,7 @@
               </picture>
 
               <div class="service__description-wrapper">
-                <h1 class="service__title"><span class="service__title-highlight">Консультация</span> по вопросам здоровья</h1>
+                <h3 class="service__title"><span class="service__title-highlight">Консультация</span> по вопросам здоровья</h3>
 
                 <ul class="service__composition">
                   <li class="service__composition-item">Приём опытного врача</li>
@@ -314,7 +314,7 @@
           </nav>
         </div>
 
-        <h2 class="visually-hidden">Наши социальные сети.</h3>
+        <h2 class="visually-hidden">Наши социальные сети.</h2>
         <ul class="footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__button" target="_blank" href="https://instagram.com">
@@ -370,20 +370,20 @@
         <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
 
           <div class="modal__input-wrapper">
-            <label class="modal__label visually-hidden" for="#client-name">Ваше имя</label>
+            <label class="modal__label visually-hidden" for="client-name">Ваше имя</label>
             <input class="modal__input" id="client-name" type="text" name="client-name" value="" placeholder="Ваше имя" autocomplete="off" required>
             <span class="modal__input-error modal__input-error--name"></span>
           </div>
 
           <div class="modal__input-wrapper">
-            <label class="modal__label visually-hidden" for="#client-phone">Ваш телефон</label>
+            <label class="modal__label visually-hidden" for="client-phone">Ваш телефон</label>
             <input class="modal__input" id="client-phone" type="tel" name="client-phone" value="" placeholder="+7 (___) ___-____" autocomplete="off" required>
             <span class="modal__input-error modal__input-error--phone"></span>
           </div>
 
           <div class="modal__button-wrapper">
             <button class="modal__button modal__button--reset" type="reset" name="reset-button">Очистить</button>
-            <button class="modal__button modal__button--submit"type="submit" name="submit-button">Записаться</button>
+            <button class="modal__button modal__button--submit" type="submit" name="submit-button">Записаться</button>
           </div>
 
           <span class="modal__form-loader"></span>

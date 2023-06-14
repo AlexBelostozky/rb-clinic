@@ -51,7 +51,7 @@
 .service__description-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 22px 23px 42px;
+  padding: 23px 23px 42px;
   background-color: @dark-gray;
 
   @media (min-width: @desktop-width) {
@@ -71,7 +71,7 @@
   line-height: 18px;
   color: @black;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   padding: 0;
 
   @media (min-width: @desktop-width) {
@@ -82,9 +82,11 @@
 }
 
 .service__title-highlight {
+  display: block;
   font-size: 26px;
   line-height: 34px;
   text-transform: uppercase;
+  margin-bottom: 4px;
 
   &::after {
     content: "\a";
@@ -105,8 +107,8 @@
   line-height: 20px;
   color: @black;
   margin: 0;
-  margin-bottom: 17px;
-  padding-left: 20px;
+  margin-bottom: 18px;
+  padding-left: 15px;
   list-style-type: disc;
 
   @media (min-width: @desktop-width) {
@@ -116,7 +118,7 @@
 }
 
 .service__composition-item {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
   &::marker {
     color: @green;
