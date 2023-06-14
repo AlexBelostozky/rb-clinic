@@ -1,8 +1,10 @@
 .service__container {
   height: 100%;
+  display: grid;
+  grid-template-rows: 169px 1fr;
 
   @media (min-width: @desktop-width) {
-    display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 496px 644px;
   }
 }
@@ -47,6 +49,8 @@
 }
 
 .service__description-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 22px 23px 42px;
   background-color: @dark-gray;
 
@@ -135,6 +139,7 @@
   color: @black;
   margin: 0;
   margin-bottom: 27px;
+  margin-top: auto;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 26px;
@@ -167,6 +172,5 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 196px 196px;
     grid-gap: 14px;
-    margin-top: auto;
   }
 }
