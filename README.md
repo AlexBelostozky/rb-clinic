@@ -23,6 +23,9 @@ Here are additional technologies that I applied in this project:
 - **Gulp** automatisation
 - **PixelPerfect** precision
 
+## Improvements
+- <p><b>Schema.org</b> markup added</p>
+
 ---
 
 ## Results
