@@ -12,6 +12,20 @@
     <link rel="preload" href="fonts/pt-sans-caption-regular.woff2" as="font">
     <link rel="preload" href="fonts/pt-sans-caption-bold.woff" as="font">
     <link rel="preload" href="fonts/pt-sans-caption-bold.woff2" as="font">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "RB Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ленина, 2Б",
+          "addressLocality": "Ростов-на-Дону"
+        },
+        "telephone": "+7(863) 000 00 00"
+      }
+      </script>
   </head>
 
   <body class="page__body">
@@ -29,28 +43,28 @@
         </div>
 
         <!-- Для отображения меню заменить модификатор объекта header__nav с closed на opened -->
-        <nav class="header__nav header__nav--opened">
+        <nav class="header__nav header__nav--opened" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <p class="visually-hidden">Навигация.</p>
 
           <ul class="header__nav-list">
             <li class="header__nav-item header__nav-item--current">
-              <a class="header__nav-link" href="#">О клинике</a>
+              <a class="header__nav-link" href="#" itemprop="url">О клинике</a>
             </li>
 
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Услуги</a>
+              <a class="header__nav-link" href="#" itemprop="url">Услуги</a>
             </li>
 
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Специалисты</a>
+              <a class="header__nav-link" href="#" itemprop="url">Специалисты</a>
             </li>
 
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Цены</a>
+              <a class="header__nav-link" href="#" itemprop="url">Цены</a>
             </li>
 
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Контакты</a>
+              <a class="header__nav-link" href="#" itemprop="url">Контакты</a>
             </li>
           </ul>
 
@@ -97,7 +111,7 @@
           <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
-        <picture class="hero__image">
+        <picture class="hero__image" itemprop="photo">
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/interior-desktop.webp 1x, img/interior-desktop@2x.webp 2x" width="950" height="532">
           <source type="image/webp" srcset="img/interior-mobile.webp 1x, img/interior-mobile@2x.webp 2x" width="375" height="288">
 
@@ -110,7 +124,7 @@
       <section class="services">
         <h2 class="visually-hidden">Наши услуги.</h2>
         <ul class="services__list">
-          <li class="services__item service">
+          <li class="services__item service" itemscope itemtype="https://schema.org/availableService">
             <article class="service__container">
               <picture class="service__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-desktop.webp 1x, img/checkup-desktop@2x.webp 2x" width="692" height="440">
@@ -121,10 +135,10 @@
                 <img src="img/checkup-mobile.jpg" srcset="img/checkup-mobile@2x.jpg 2x" width="340" height="169" alt="Врач делает заметки в записной книжке.">
               </picture>
 
-              <div class="service__description-wrapper">
-                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для мужчин</h3>
+              <div class="service__description-wrapper" itemscope itemtype="https://schema.org/MedicalEntity">
+                <h3 class="service__title" itemprop="name"><span class="service__title-highlight">Check-Up</span> для мужчин</h3>
 
-                <ul class="service__composition">
+                <ul class="service__composition" itemprop="description">
                   <li class="service__composition-item">Гормональный скрининг</li>
 
                   <li class="service__composition-item">Тестостерон</li>
@@ -135,19 +149,19 @@
                 </ul>
 
                 <p class="service__price">Всего
-                  <span class="service__price-actual">2800₽</span>
+                  <span class="service__price-actual" itemprop="price">2800₽</span>
                   <span class="service__price-old">3500₽</span>
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank" itemprop="url">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
             </article>
           </li>
 
-          <li class="services__item service">
+          <li class="services__item service" itemscope itemtype="https://schema.org/availableService">
             <article class="service__container">
               <picture class="service__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-all-desktop.webp 1x, img/checkup-all-desktop@2x.webp 2x" width="692" height="440">
@@ -158,29 +172,29 @@
                 <img src="img/checkup-all-mobile.jpg" srcset="img/checkup-all-mobile@2x.jpg 2x" width="340" height="169" alt="Счастливая и здоровая семья на природе.">
               </picture>
 
-              <div class="service__description-wrapper">
-                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для всех</h3>
+              <div class="service__description-wrapper" itemscope itemtype="https://schema.org/MedicalEntity">
+                <h3 class="service__title" itemprop="name"><span class="service__title-highlight">Check-Up</span> для всех</h3>
 
-                <ul class="service__composition">
+                <ul class="service__composition" itemprop="description">
                   <li class="service__composition-item">Гормональный скрининг</li>
 
                   <li class="service__composition-item">Общий анализ крови</li>
                 </ul>
 
                 <p class="service__price">Всего
-                  <span class="service__price-actual">1800₽</span>
+                  <span class="service__price-actual" itemprop="price">1800₽</span>
                   <span class="service__price-old">2500₽</span>
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank" itemprop="url">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
             </article>
           </li>
 
-          <li class="services__item service">
+          <li class="services__item service" itemscope itemtype="https://schema.org/availableService">
             <article class="service__container">
               <picture class="service__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/checkup-child-desktop.webp 1x, img/checkup-child-desktop@2x.webp 2x" width="692" height="440">
@@ -191,10 +205,10 @@
                 <img src="img/checkup-child-mobile.jpg" srcset="img/checkup-child-mobile@2x.jpg 2x" width="340" height="169" alt="Врач консультирует ребёнка.">
               </picture>
 
-              <div class="service__description-wrapper">
-                <h3 class="service__title"><span class="service__title-highlight">Check-Up</span> для детей</h3>
+              <div class="service__description-wrapper" itemscope itemtype="https://schema.org/MedicalEntity">
+                <h3 class="service__title" itemprop="name"><span class="service__title-highlight">Check-Up</span> для детей</h3>
 
-                <ul class="service__composition">
+                <ul class="service__composition" itemprop="description">
                   <li class="service__composition-item">Анализ на витамин D</li>
 
                   <li class="service__composition-item">Общий анализ крови</li>
@@ -205,19 +219,19 @@
                 </ul>
 
                 <p class="service__price">Всего
-                  <span class="service__price-actual">1500₽</span>
+                  <span class="service__price-actual" itemprop="price">1500₽</span>
                   <span class="service__price-old">1800₽</span>
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank" itemprop="url">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
             </article>
           </li>
 
-          <li class="services__item service">
+          <li class="services__item service" itemscope itemtype="https://schema.org/availableService">
             <article class="service__container">
               <picture class="service__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/consult-desktop.webp 1x, img/consult-desktop@2x.webp 2x" width="692" height="440">
@@ -228,10 +242,10 @@
                 <img src="img/consult-mobile.jpg" srcset="img/consult-mobile@2x.jpg 2x" width="340" height="169" alt="Врач за компьютером производит анализ информации.">
               </picture>
 
-              <div class="service__description-wrapper">
-                <h3 class="service__title"><span class="service__title-highlight">Консультация</span> по вопросам здоровья</h3>
+              <div class="service__description-wrapper" itemscope itemtype="https://schema.org/MedicalEntity">
+                <h3 class="service__title" itemprop="name"><span class="service__title-highlight">Консультация</span> по вопросам здоровья</h3>
 
-                <ul class="service__composition">
+                <ul class="service__composition" itemprop="description">
                   <li class="service__composition-item">Приём опытного врача</li>
 
                   <li class="service__composition-item">Сбор анамнеза</li>
@@ -242,12 +256,12 @@
                 </ul>
 
                 <p class="service__price">Всего
-                  <span class="service__price-actual">2000₽</span>
+                  <span class="service__price-actual" itemprop="price">2000₽</span>
                   <span class="service__price-old">3000₽</span>
                 </p>
 
                 <div class="service__button-container">
-                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank">Записаться</a>
+                  <a class="button button--main enroll-button" href="https://wa.me/+78630000000" target="_blank" itemprop="url">Записаться</a>
                   <a class="button button--secondary" href="#">Подробнее</a>
                 </div>
               </div>
